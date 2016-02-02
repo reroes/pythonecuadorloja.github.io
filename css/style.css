@@ -305,8 +305,6 @@ hr {
 	width:100%;
 	position:relative;
 	
-/*	background: url(../img/bg1.jpg) no-repeat top center;*/
-
 background: rgba(237,245,241,1);
 background: -moz-linear-gradient(left, rgba(237,245,241,1) 0%, rgba(50,108,156,1) 100%);
 background: -webkit-gradient(left top, right top, color-stop(0%, rgba(237,245,241,1)), color-stop(100%, rgba(50,108,156,1)));
