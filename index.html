@@ -15,6 +15,9 @@
 
 	<title>PyDay 2016 - Loja</title>
 
+	<!-- CountDown -->
+	<link rel="stylesheet" href="css/flipclock.css">
+
 	<!-- Bootstrap Core CSS -->
 	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
@@ -25,6 +28,7 @@
 	<!-- Squad theme CSS -->
 	<link href="css/style.css" rel="stylesheet">
 	<link href="color/default.css" rel="stylesheet">
+
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
@@ -64,9 +68,10 @@
 	<!-- Section: intro -->
 	<section id="intro" class="intro">
 		<div class="container">
+
 			<div class="row">
-				<div class="col-sm-6 col-md-6">
-					<div class="wow fadeInLeft " data-wow-delay="0.2s">
+				<div class="col-sm-4 col-md-4">
+					<div class="wow fadeInLeft" data-wow-delay="0.2s">
 						<div class="service-box">
 							<div class="service-desc logo">
 								<img src="img/logo_loja.png" alt="" class="img-responsive" />
@@ -74,7 +79,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-6 col-md-6">
+				<div class="col-sm-8 col-md-8">
+
+					<div class="row">
 					<div class="wow fadeInUp" data-wow-delay="0.2s">
 						<div class="service-box">
 							<div class="service-desc" >
@@ -95,6 +102,11 @@
 						</div>
 					</div>
 				</div>
+				<div class="row">
+					<div class="clock"></div>
+				</div>
+			</div>
+
 			</div>
 		</div>
 	</section>
@@ -367,7 +379,7 @@
 				</div>
 
 				<div class="col-xs-6 col-sm-3 col-md-3">
-                                        <div class="wow bounceInUp" data-wow-delay="0.02s">
+					<div class="wow bounceInUp" data-wow-delay="0.02s">
 						<div class="team boxed-grey">
 							<div class="inner">
 								<h5>Marlon Viñan</h5>
@@ -603,7 +615,25 @@
 	<script src="js/jquery.easing.min.js"></script>
 	<script src="js/jquery.scrollTo.js"></script>
 	<script src="js/wow.min.js"></script>
+	<script src="js/flipclock.js"></script>
 	<!-- Custom Theme JavaScript -->
 	<script src="js/custom.js"></script>
+	<!-- Para el countdown -->
+	<script type="text/javascript">
+	$( document ).ready(function() {
+			var fecha = (new Date("April 01, 2016 09:00:00"))/1000; //Month Days, Year HH:MM:SS
+			var time  = $.now()/1000;
+			var diff = fecha - time;
+
+			var clock = $('.clock').FlipClock({
+				autoStart: false,
+				clockFace: 'DailyCounter',
+				countdown: true,
+			});
+			clock.setTime(diff);
+			clock.start();
+
+	});
+	</script>
 </body>
 </html>

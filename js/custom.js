@@ -2,7 +2,7 @@
 
 	new WOW().init();
 
-	jQuery(window).load(function() { 
+	jQuery(window).load(function() {
 		jQuery("#preloader").delay(100).fadeOut("slow");
 		jQuery("#load").delay(100).fadeOut("slow");
 	});
@@ -68,7 +68,7 @@
 	});
 
 
-	var styles = [ 
+	var styles = [
 
 	{
 		"featureType": "road",
@@ -109,9 +109,8 @@
 	map.addStyle({
 		styledMapName:"Styled Map",
 		styles: styles,
-		mapTypeId: "map_style"  
+		mapTypeId: "map_style"
 	});
 
 	map.setStyle("map_style");
 })(jQuery);
-
